@@ -1,6 +1,17 @@
+import { useSelector } from 'react-redux';
+
 export const Counter = () => {
   const incident = 'Incident';
-  const count = 0;
+
+  /**
+   ** Use hooks para selecionar elementos.
+   *
+   * Essa função te pergunta o seguinte:
+   * O que vc quer do state total?
+   *
+   * Você pode disparar esses types direto na extensão
+   */
+  const { count } = useSelector((state) => state);
 
   return (
     <main className="Counter">
